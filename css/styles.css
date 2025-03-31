@@ -1,0 +1,552 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #3b3b3b;
+    color: #fff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ff6347;
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff6347;
+}
+/* Стили для меню */
+.menu-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Скрываем меню на мобильных устройствах */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Высота шапки */
+        right: 0;
+        background: white;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: #fff;
+    }
+
+    .menu-list.show {
+        display: flex;
+        background: #3b3b3b;
+        padding: 10px;
+    }
+}
+
+.main-block {
+    padding: 80px 0;
+    background: url('../images/main-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+}
+.main-block .container {
+    background: #00000080;
+    padding: 20px;
+    border-radius: 15px;
+}
+.main-block h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.main-block h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e5533d;
+}
+
+.view-all-btn {
+    margin-top: 30px;
+}
+
+.games-block {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.game-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.game-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    width: 27%;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    height: 300px;
+    width: auto;
+}
+
+.buy-btn {
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    width: 180px;
+    font-size: 18px;
+}
+
+.buy-btn:hover {
+    background: #0056b3;
+}
+
+.about-block {
+    padding: 60px 0;
+    background: #eee;
+    border-top: 1px solid #ddd;
+}
+
+.about-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.advantages-block {
+    padding: 60px 0;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.advantages-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.advantage-item {
+    text-align: center;
+    flex: 1;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+}
+
+.advantage-item img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.offer-block {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+}
+
+.offer-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.offer-text {
+    flex: 1;
+}
+
+.offer-image {
+    flex: 1;
+}
+
+.offer-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.faq-block {
+    padding: 60px 0;
+    background: #eee;
+    border-top: 1px solid #ddd;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-item h3 {
+    margin: 0;
+    padding: 10px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.faq-item:hover h3 {
+    background: #ccc;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.reviews-block {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.review-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+    background: #f9f9f9;
+}
+
+.review-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff6347;
+}
+
+.review-content {
+    flex: 1;
+    text-align: left;
+}
+
+.review-rating span {
+    color: #ffdd57;
+    font-size: 1.2rem;
+}
+
+.reviewer-name {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.gallery-block {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-block {
+    padding: 60px 0 20px;
+    background: #333333;
+}
+
+.contact-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.contact-info {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    color: #000;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #ff6347;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 17px;
+}
+
+form button:hover {
+    background: #e5533d;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #e5533d;
+}
+
+#newsletter-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Попап */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.popup img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    width: 180px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .game-item {
+        width: 41%!important;
+    }
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+    .game-item {
+        width: 89%;
+    }
+    .about-container, .advantages-list, .contact-container, .offer-container {
+        flex-direction: column;
+    }
+
+    .game-list, .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}
+.price {
+    font-size: 18px; /* Размер шрифта для лучшей видимости */
+    font-weight: bold; /* Жирный шрифт для выделения */
+    color: #e74c3c; /* Приятный красный цвет для привлечения внимания */
+    margin: 10px 0; /* Отступы сверху и снизу для улучшения пространства */
+    display: block; /* Отображение в виде блока для новой строки */
+}
+/* Основные стили для страницы "Thanks" */
+.thanks-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Высота, чтобы центрировать содержимое по вертикали */
+    text-align: center;
+    background-color: #f4f4f9; /* Нежный фон */
+}
+
+.thanks-main h2 {
+    font-size: 2em;
+    color: #2c3e50; /* Темный оттенок для заголовка */
+    margin-bottom: 10px;
+}
+
+.thanks-main p {
+    font-size: 1.2em;
+    color: #34495e; /* Немного светлее, чтобы выделить текст */
+    margin-bottom: 20px;
+}
+
+.thanks-main .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #3498db; /* Цвет кнопки */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.thanks-main .btn:hover {
+    background-color: #2980b9; /* Цвет при наведении */
+}
